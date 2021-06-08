@@ -100,6 +100,10 @@ GEM
       webrick (~> 1.7)
     bridgetown-paginate (0.21.0)
       bridgetown-core (= 0.21.0)
+    bridgetown-view-component (0.7.0)
+      actionview (~> 6.0)
+      bridgetown (>= 0.21.0, < 2.0)
+      view_component (>= 2.32)
     builder (3.2.4)
     coderay (1.1.3)
     colorator (1.1.0)
@@ -228,6 +232,7 @@ PLATFORMS
 DEPENDENCIES
   actionpack
   bridgetown (~> 0.21.0)
+  bridgetown-view-component (~> 0.7.0)
   citizens_advice_components!
   pry
   railties

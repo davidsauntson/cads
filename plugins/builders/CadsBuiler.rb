@@ -11,7 +11,27 @@ class CadsBuilder < SiteBuilder
   end
 
   def build_components_collection
-    
+    ViewComponent::Preview.descendants.each do |preview|
+      data = preview_data(preview)
+
+      data[:variants].each do |variant|
+        doc "#{data[:slug]}_#{variant}.md" do
+          collection "previews"
+          front_matter data
+          title data[:slug]
+          content data[:slug]
+        end
+      end
+    end
+  end
+
+  def preview_data(preview) 
+    {
+      layout: "preview",
+      slug: preview.name.partition("::").last.chomp("Preview").underscore,
+      variants: preview.examples,
+      preview: preview
+    }
   end
 
   def make_test_posts

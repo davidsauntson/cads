@@ -24,3 +24,5 @@ gem "railties" # required by Primer
 gem "actionpack" # required by Primer
 gem "pry"
 gem "view_component", require: "view_component/engine"
+
+gem "bridgetown-view-component", "~> 0.7.0", :group => :bridgetown_plugins
