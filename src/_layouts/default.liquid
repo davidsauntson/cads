@@ -1,7 +1,9 @@
-!!!
-%html{ lang: 'en' }
-  %head
-    = render 'head', metadata: site.metadata, title: page&.title
-
-  %body
-    = yield
+<!doctype html>
+<html lang="en">
+  <head>
+    {% render "head", metadata: site.metadata, title: page.title %}
+  </head>
+  <body>
+    {{ content }}
+  </body>
+</html>
