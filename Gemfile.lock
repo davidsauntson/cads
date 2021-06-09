@@ -98,6 +98,9 @@ GEM
       thor (~> 1.1)
       tilt (~> 2.0)
       webrick (~> 1.7)
+    bridgetown-haml (1.1.1)
+      bridgetown (>= 0.18, < 2.0)
+      haml (>= 5.1.2)
     bridgetown-paginate (0.21.0)
       bridgetown-core (= 0.21.0)
     bridgetown-view-component (0.7.0)
@@ -232,6 +235,7 @@ PLATFORMS
 DEPENDENCIES
   actionpack
   bridgetown (~> 0.21.0)
+  bridgetown-haml (~> 1.1)
   bridgetown-view-component (~> 0.7.0)
   citizens_advice_components!
   pry

@@ -9,13 +9,13 @@
 // Shipped with Bridgetown v0.21.0
 
 const path = require("path");
-const rootDir = path.resolve(__dirname, "..")
+const rootDir = path.resolve(__dirname, "..");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const ManifestPlugin = require("webpack-manifest-plugin");
 
 module.exports = {
   entry: {
-    main: path.resolve(rootDir, "frontend", "javascript", "index.js")
+    main: path.resolve(rootDir, "frontend", "javascript", "index.js"),
   },
   devtool: "source-map",
   // Set some or all of these to true if you want more verbose logging:
@@ -32,13 +32,13 @@ module.exports = {
   resolve: {
     extensions: [".js", ".jsx"],
     modules: [
-      path.resolve(rootDir, 'frontend', 'javascript'),
-      path.resolve(rootDir, 'frontend', 'styles'),
-      path.resolve(rootDir, 'node_modules')
+      path.resolve(rootDir, "frontend", "javascript"),
+      path.resolve(rootDir, "frontend", "styles"),
+      path.resolve(rootDir, "node_modules"),
     ],
     alias: {
-      bridgetownComponents: path.resolve(rootDir, "src", "_components")
-    }
+      bridgetownComponents: path.resolve(rootDir, "src", "_components"),
+    },
   },
   plugins: [
     new MiniCssExtractPlugin({
@@ -57,20 +57,19 @@ module.exports = {
           options: {
             presets: ["@babel/preset-env"],
             plugins: [
-              ["@babel/plugin-proposal-decorators", { "legacy": true }],
-              ["@babel/plugin-proposal-class-properties", { "loose" : true }],
+              ["@babel/plugin-proposal-decorators", { legacy: true }],
+              ["@babel/plugin-proposal-class-properties", { loose: true }],
               [
                 "@babel/plugin-transform-runtime",
                 {
                   helpers: false,
                 },
               ],
-              ["@babel/plugin-proposal-private-methods", { "loose": true }],
+              ["@babel/plugin-proposal-private-methods", { loose: true }],
             ],
           },
         },
       },
-      
       {
         test: /\.(s[ac]|c)ss$/,
         use: [
@@ -78,8 +77,11 @@ module.exports = {
           {
             loader: "css-loader",
             options: {
-              url: url => !url.startsWith('/')
-            }
+              url: (url) => !url.startsWith("/"),
+            },
+          },
+          {
+            loader: "resolve-url-loader",
           },
           {
             loader: "sass-loader",
@@ -87,15 +89,13 @@ module.exports = {
               implementation: require("sass"),
               sassOptions: {
                 fiber: false,
-                includePaths: [
-                  path.resolve(rootDir, "src/_components")
-                ],
+                includePaths: [path.resolve(rootDir, "src/_components")],
               },
             },
           },
         ],
       },
-      
+
       {
         test: /\.woff2?$|\.ttf$|\.eot$/,
         loader: "file-loader",
