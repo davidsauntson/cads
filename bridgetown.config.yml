@@ -21,7 +21,6 @@ url: "" # the base hostname & protocol for your site, e.g. https://example.com
 permalink: pretty
 
 collections:
-  components:
+  previews:
     output: true
-    sort_by: title
 # timezone: America/Los_Angeles

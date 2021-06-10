@@ -29,3 +29,5 @@ gem 'bridgetown-view-component', '~> 0.7', group: :bridgetown_plugins
 gem 'bridgetown-haml', '~> 1.1', group: :bridgetown_plugins
 
 
+
+gem "view_components", "~> 0.1.0"

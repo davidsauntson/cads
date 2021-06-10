@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/citizensadvice/design-system.git
-  revision: 83c4c7f0619f844ad613d503a597414c23d5b56b
+  revision: 1986f96ce5bae4ab52ed30bdb2ae41c735c68ca2
   branch: experimental/cads-ssg
   specs:
     citizens_advice_components (0.1.0)
@@ -223,8 +223,10 @@ GEM
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
     unicode-display_width (1.7.0)
-    view_component (2.33.0)
+    view_component (2.34.0)
       activesupport (>= 5.0.0, < 7.0)
+    view_components (0.1.0)
+      rails
     webrick (1.7.0)
     websocket-driver (0.7.4)
       websocket-extensions (>= 0.1.0)
@@ -241,6 +243,7 @@ DEPENDENCIES
   bridgetown-view-component (~> 0.7)
   citizens_advice_components!
   pry
+  view_components (~> 0.1.0)
 
 BUNDLED WITH
    1.17.3

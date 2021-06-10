@@ -1,8 +1,9 @@
 # frozen_string_literal: true
 
 require 'action_dispatch'
+require 'view_components'
 require 'rails/engine'
-require 'citizens_advice_components/engine'
+require 'citizens_advice_components'
 require 'pry'
 
 class CadsBuilder < SiteBuilder
@@ -12,6 +13,7 @@ class CadsBuilder < SiteBuilder
   end
 
   def build_components_collection
+    binding.pry
     ViewComponent::Preview.descendants.each do |preview|
       data = preview_data(preview)
       front_matter = { layout: 'preview' }
@@ -46,6 +48,7 @@ class CadsBuilder < SiteBuilder
     site.config.loaded_cads ||= begin
       cads_loader = Zeitwerk::Loader.new
       CitizensAdviceComponents::Engine.config.autoload_paths.each do |path|
+        puts path
         cads_loader.push_dir path
       end
       cads_loader.setup
