@@ -1,5 +1,7 @@
-PATH
-  remote: /Users/davidsauntson/repos/design-system/engine
+GIT
+  remote: https://github.com/citizensadvice/design-system.git
+  revision: 83c4c7f0619f844ad613d503a597414c23d5b56b
+  branch: experimental/cads-ssg
   specs:
     citizens_advice_components (0.1.0)
       haml (>= 5.1.0, < 6.0)
@@ -236,11 +238,9 @@ DEPENDENCIES
   actionpack
   bridgetown (~> 0.21.0)
   bridgetown-haml (~> 1.1)
-  bridgetown-view-component (~> 0.7.0)
+  bridgetown-view-component (~> 0.7)
   citizens_advice_components!
   pry
-  railties
-  view_component
 
 BUNDLED WITH
    1.17.3

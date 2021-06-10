@@ -1,4 +1,6 @@
-source "https://rubygems.org"
+# frozen_string_literal: true
+
+source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 # Hello! This is where you manage which Bridgetown version is used to run.
@@ -16,15 +18,14 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 #
 # Happy Bridgetowning!
 
-gem "bridgetown", "~> 0.21.0"
+gem 'bridgetown', '~> 0.21.0'
+gem "citizens_advice_components",
+    github: "citizensadvice/design-system",
+    branch: "experimental/cads-ssg"
+    
+gem 'actionpack'
+gem 'pry'
+gem 'bridgetown-view-component', '~> 0.7', group: :bridgetown_plugins
+gem 'bridgetown-haml', '~> 1.1', group: :bridgetown_plugins
 
-gem "citizens_advice_components", path: "/Users/davidsauntson/repos/design-system/engine"
 
-gem "railties" # required by Primer
-gem "actionpack" # required by Primer
-gem "pry"
-gem "view_component", require: "view_component/engine"
-
-gem "bridgetown-view-component", "~> 0.7.0", :group => :bridgetown_plugins
-
-gem "bridgetown-haml", "~> 1.1", :group => :bridgetown_plugins

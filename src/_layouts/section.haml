@@ -1,0 +1,14 @@
+~~~ruby
+{
+  layout: :page,
+  breadcrumbs: [{ title: "Home", url: "/" }]
+}
+~~~
+%main#cads-main-content
+  .cads-grid-container.cads-page-content 
+    .cads-grid-row 
+      .cads-grid-col-md-8
+        %h1.cads-page-title
+          = page[:title]
+        .cads-prose
+          = yield 
