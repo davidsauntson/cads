@@ -17,10 +17,17 @@ This uses [Bridgetown static site generator](https://www.bridgetownrb.com/) to:
 
 Then you can either:
 
-- run `yarn start` to start the site propert
+- run `yarn start` to start the site proper
 - run `bundle exec bridgetown serve` to just start the site with no yarny bits (useful if you want to `binding.pry` and play in the console)
 
 ## The story so far
+
+### Create the static site
+
+- [x] setup bridgetown
+- [x] create getting started page
+- [ ] create sections template that list components
+- [x] create illustrative component documentation pages
 
 ### Using the 'old' design-system
 
