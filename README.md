@@ -2,8 +2,9 @@
 
 ## Bridge(r)to(w)n
 
-This uses [Bridgetown static site generator](https://www.bridgetownrb.com/) to:
+Goals:
 
+- use [Bridgetown static site generator](https://www.bridgetownrb.com/) to:
 - create a static site we can use to document the design-system and replace storybook
 - serve all the variants of each component as documented already in the `CitizensAdviceComponentPreview` classes **without** repeating the example parameters in this code base
 - use the new `CitizensAdviceComponents` in this static site
