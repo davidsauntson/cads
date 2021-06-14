@@ -31,7 +31,7 @@
     "webpack-manifest-plugin": "^2.1.0"
   },
   "dependencies": {
-    "@citizensadvice/design-system": "^4.1.1-alpha.0",
+    "@citizensadvice/design-system": "^4.1.1-alpha.1",
     "resolve-url-loader": "^4.0.0"
   }
 }

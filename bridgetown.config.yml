@@ -23,4 +23,6 @@ permalink: pretty
 collections:
   previews:
     output: true
+  cads-components:
+    output: true
 # timezone: America/Los_Angeles
