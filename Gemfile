@@ -20,8 +20,9 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 gem 'bridgetown', '~> 0.21.0'
 gem "citizens_advice_components",
-    github: "citizensadvice/design-system",
-    branch: "experimental/cads-ssg"
+    # github: "citizensadvice/design-system",
+    # branch: "experimental/cads-ssg"
+    path: "/Users/davidsauntson/repos/design-system"
     
 gem 'actionpack'
 gem 'pry'

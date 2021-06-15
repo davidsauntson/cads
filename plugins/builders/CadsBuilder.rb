@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
-require 'action_dispatch'
-require 'rails/engine'
+
 require 'citizens_advice_components'
 require 'pry'
 
