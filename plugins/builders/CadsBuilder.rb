@@ -3,7 +3,13 @@
 require 'action_dispatch'
 require 'rails/engine'
 require 'citizens_advice_components'
-require 'pry'
+
+# We have a bug somewhere between bridgetown and citizens_advice_components which
+# prevents haml from being seen as a tempalte handler. A simple workaround is to
+# manually re-register the handler.
+require 'haml/plugin'
+
+ActionView::Template.register_template_handler(:haml, Haml::Plugin)
 
 class CadsBuilder < SiteBuilder
   def build
@@ -50,7 +56,6 @@ class CadsBuilder < SiteBuilder
       end
       cads_loader.setup
       cads_loader.eager_load
-      # Rails.application.config = CitizensAdviceComponents::Engine.config
       true
     end
   end

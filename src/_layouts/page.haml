@@ -4,11 +4,11 @@
 }
 ~~~
 
--# = render CitizensAdviceComponents::Breadcrumbs.new(links: [{title: "Home", url: "/"}, { title: "Getting started" } ])
 
-- nav_links = [{ "title" => "Getting started", "url" => "/" }, { "title" => "Foundations", "url" => "/foundations" }, { "title" => "Components", "url" => "/cads-components" }, { "title" => "Forms", "url" => "/forms" }] 
+- nav_links = [{ "title" => "Getting started", "url" => "/" }, { "title" => "Foundations", "url" => "/foundations" }, { "title" => "Components", "url" => "/cads-components" }, { "title" => "Forms", "url" => "/forms" }]
 
 = render "shared/header"
 = render "cads/navigation", locals: { navigation_links: nav_links }
+= render CitizensAdviceComponents::Breadcrumbs.new(links: [{title: "Home", url: "/"}, { title: "Getting started" } ])
 
 = yield
