@@ -24,7 +24,7 @@ gem 'bridgetown-view-component', '~> 0.7', group: :bridgetown_plugins
 
 gem 'citizens_advice_components',
     github: 'citizensadvice/design-system',
-    branch: 'experimental/haml-debug'
+    tag: 'v4.2.0'
 
 # gem "citizens_advice_components", path: "../design-system/engine"
 
