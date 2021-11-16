@@ -896,10 +896,10 @@
     "@babel/helper-validator-identifier" "^7.14.0"
     to-fast-properties "^2.0.0"
 
-"@citizensadvice/design-system@^4.1.1-alpha.0":
-  version "4.1.1-alpha.0"
-  resolved "https://registry.yarnpkg.com/@citizensadvice/design-system/-/design-system-4.1.1-alpha.0.tgz#929bf3eca8ce1fb5934cea19a0a26057d0b0a1a2"
-  integrity sha512-RMix/zzvdD3+WpzWCnI26DCgtJfK4FYPzzwFGta+5E76lkNbknVqjnW1JY0rwZYsd8YbEO60GPwum7ivZK8PFQ==
+"@citizensadvice/design-system@^4.2.0":
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/@citizensadvice/design-system/-/design-system-4.2.0.tgz#b7a9b5075ea56d48352c617b833f23833dd25a09"
+  integrity sha512-tz2qD3GLhpyMYWFT1jmlWJxdLQkyvToreeKv4QcfencphNsORJskooPQVm/R6GsDWpP+6O7OZkKB5kWdMFv7mQ==
 
 "@types/json-schema@^7.0.5", "@types/json-schema@^7.0.6":
   version "7.0.7"

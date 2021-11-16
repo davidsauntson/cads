@@ -1,11 +1,12 @@
 GIT
   remote: https://github.com/citizensadvice/design-system.git
-  revision: 1986f96ce5bae4ab52ed30bdb2ae41c735c68ca2
-  branch: experimental/cads-ssg
+  revision: 51e48aba74478729c7166a6a80d17396cf6c5478
+  tag: v4.2.0
   specs:
     citizens_advice_components (0.1.0)
-      haml (>= 5.1.0, < 6.0)
+      haml-rails (>= 2.0.0, < 3.0)
       rails (>= 6.0.0, < 7.0)
+      rails-i18n (>= 6.0.0, < 7.0)
       view_component (>= 2.0.0, < 3.0)
 
 GEM
@@ -115,6 +116,7 @@ GEM
     concurrent-ruby (1.1.9)
     crass (1.0.6)
     erubi (1.10.0)
+    erubis (2.7.0)
     faraday (1.4.2)
       faraday-em_http (~> 1.0)
       faraday-em_synchrony (~> 1.0)
@@ -131,13 +133,24 @@ GEM
     faraday_middleware (1.0.0)
       faraday (~> 1.0)
     ffi (1.15.1)
-    globalid (0.4.2)
-      activesupport (>= 4.2.0)
+    globalid (0.5.2)
+      activesupport (>= 5.0)
     haml (5.2.1)
       temple (>= 0.8.0)
       tilt
+    haml-rails (2.0.1)
+      actionpack (>= 5.1)
+      activesupport (>= 5.1)
+      haml (>= 4.0.6, < 6.0)
+      html2haml (>= 1.0.1)
+      railties (>= 5.1)
     hash_with_dot_access (1.1.0)
       activesupport (>= 5.0.0, < 7.0)
+    html2haml (2.2.0)
+      erubis (~> 2.7.0)
+      haml (>= 4.0, < 6)
+      nokogiri (>= 1.6.0)
+      ruby_parser (~> 3.5)
     i18n (1.8.10)
       concurrent-ruby (~> 1.0)
     kramdown (2.3.1)
@@ -162,7 +175,7 @@ GEM
     mini_portile2 (2.5.3)
     minitest (5.14.4)
     multipart-post (2.1.1)
-    nio4r (2.5.7)
+    nio4r (2.5.8)
     nokogiri (1.11.7)
       mini_portile2 (~> 2.5.0)
       racc (~> 1.4)
@@ -194,20 +207,26 @@ GEM
       nokogiri (>= 1.6)
     rails-html-sanitizer (1.3.0)
       loofah (~> 2.3)
+    rails-i18n (6.0.0)
+      i18n (>= 0.7, < 2)
+      railties (>= 6.0.0, < 7)
     railties (6.1.3.2)
       actionpack (= 6.1.3.2)
       activesupport (= 6.1.3.2)
       method_source
       rake (>= 0.8.7)
       thor (~> 1.0)
-    rake (13.0.3)
+    rake (13.0.6)
     rb-fsevent (0.11.0)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     rexml (3.2.5)
     rouge (3.26.0)
     ruby2_keywords (0.0.4)
+    ruby_parser (3.17.0)
+      sexp_processor (~> 4.15, >= 4.15.1)
     safe_yaml (1.0.5)
+    sexp_processor (4.15.3)
     sprockets (4.0.2)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
@@ -225,10 +244,8 @@ GEM
     unicode-display_width (1.7.0)
     view_component (2.34.0)
       activesupport (>= 5.0.0, < 7.0)
-    view_components (0.1.0)
-      rails
     webrick (1.7.0)
-    websocket-driver (0.7.4)
+    websocket-driver (0.7.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
     zeitwerk (2.4.2)
@@ -237,13 +254,11 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  actionpack
   bridgetown (~> 0.21.0)
   bridgetown-haml (~> 1.1)
   bridgetown-view-component (~> 0.7)
   citizens_advice_components!
   pry
-  view_components (~> 0.1.0)
 
 BUNDLED WITH
    1.17.3

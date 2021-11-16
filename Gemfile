@@ -19,15 +19,13 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 # Happy Bridgetowning!
 
 gem 'bridgetown', '~> 0.21.0'
-gem "citizens_advice_components",
-    github: "citizensadvice/design-system",
-    branch: "experimental/cads-ssg"
-    
-gem 'actionpack'
-gem 'pry'
-gem 'bridgetown-view-component', '~> 0.7', group: :bridgetown_plugins
 gem 'bridgetown-haml', '~> 1.1', group: :bridgetown_plugins
+gem 'bridgetown-view-component', '~> 0.7', group: :bridgetown_plugins
 
+gem 'citizens_advice_components',
+    github: 'citizensadvice/design-system',
+    tag: 'v4.2.0'
 
+# gem "citizens_advice_components", path: "../design-system/engine"
 
-gem "view_components", "~> 0.1.0"
+gem 'pry'
